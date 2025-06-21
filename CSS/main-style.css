@@ -1,0 +1,214 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Quicksand:wght@300..700&display=swap');
+body
+{
+			background-color:#E9E9E9;
+			 color:#666;
+			 font-family:"Quicksand",Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+			 font-size: 16px;
+			margin: 0
+}
+h1,h2,h3,h4,h5,h6{ margin-top: 0; margin-bottom: 5px}
+h1.tentruong
+{
+	font-size: 5vw;
+	color: #DC730B
+}
+@media (min-width:1000px)
+{
+		h1.tentruong
+	{
+		font-size: 3vw;
+
+	}
+}
+h2{ font-size: 42px}
+h3{ 
+	font-size: 36px;
+	font-family: "Italianno", cursive;
+}
+.container
+{
+	width:100%;
+	margin: auto;
+	/*border: solid red 2px*/
+}	
+@media (min-width:600px)
+{
+			.container
+		{
+			width:90%;
+			
+		}	
+}
+@media (min-width:1000px)
+{
+		.container
+		{
+			width:80%;
+		}	
+}
+*{ box-sizing: border-box}
+/*day vien va bo le vao trong cho he thong luoi*/
+.col-1 { width: 8.33%}
+.col-2{ width: 16.66%}
+.col-3{ width: 25%}
+.col-4{ width: 33.33%}
+.col-5{ width: 41.66%}
+.col-6{ width: 50%}
+.col-7{ width: 58.33%}
+.col-8{ width: 66.66%}
+.col-9{ width: 75%}
+.col-10{ width: 83.33%}
+.col-11{ width: 91.66%}
+.col-12{ width: 100%}
+[class*="col-"]
+{
+	padding: 15px;
+	/*border: 1px solid blue*/
+}
+.row{
+	display: flex;flex-wrap: wrap}
+/*---- he thong luoi 12 cot medium cho tablet 600px-1000px*/
+@media (min-width:600px)
+{
+	.col-md-1 { width: 8.33%}
+	.col-md-2{ width: 16.66%}
+	.col-md-3{ width: 25%}
+	.col-md-4{ width: 33.33%}
+	.col-md-5{ width: 41.66%}
+	.col-md-6{ width: 50%}
+	.col-md-7{ width: 58.33%}
+	.col-md-8{ width: 66.66%}
+	.col-md-9{ width: 75%}
+	.col-md-10{ width: 83.33%}
+	.col-md-11{ width: 91.66%}
+	.col-md-12{ width: 100%}
+}
+/*---- he thong luoi 12 cot large cho pc-1000px tro len*/
+@media (min-width:1000px)
+{
+	.col-lg-1 { width: 8.33%}
+	.col-lg-2{ width: 16.66%}
+	.col-lg-3{ width: 25%}
+	.col-lg-4{ width: 33.33%}
+	.col-lg-5{ width: 41.66%}
+	.col-lg-6{ width: 50%}
+	.col-lg-7{ width: 58.33%}
+	.col-lg-8{ width: 66.66%}
+	.col-lg-9{ width: 75%}
+	.col-lg-10{ width: 83.33%}
+	.col-lg-11{ width: 91.66%}
+	.col-lg-12{ width: 100%}
+
+}
+
+
+/*chỉnh các items trong flex theo chiều dọc*/
+.align-items-start { align-items: flex-start} /* sát trên*/
+.align-items-center { align-items: center}/* ở giữa chiều dọc*/
+.align-items-end { align-items: flex-end}/* sát chân*/
+/*chỉnh các items trong flex theo chiều ngang*/
+.justify-start { justify-content: flex-start}
+.justify-center { justify-content: center}
+.justify-end { justify-content: flex-end}
+.justify-between { justify-content: space-between}
+.justify-around { justify-content:space-around}
+
+
+/*-- chỉnh cho ảnh full 100%, với box được chia*/
+.img-100{ width: 100%; height: auto}
+/* ---- style cho menu--------*/
+.btn-menu{
+	position: absolute; 
+	right: 0; top: 0;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #00D6F9;
+	border: none;
+	z-index: 2 /* cho chỉ số lớp layer lớn để button ba gạch nằm trên cái menu*/
+	}
+ul.menu{
+	margin: 0;
+	margin-top: 15px;
+	padding: 0;
+	list-style: none; /*bỏ chấm đầu dòng*/
+	display:none
+}
+ul.menu li
+{
+	position: relative
+}
+ul.menu li a
+{
+	text-decoration: none; /*bỏ gach chân*/
+	background-color: #1985E9;
+	color: #fff;
+	display:block;
+	padding: 10px;
+	margin: 1px
+}
+/*-- thiết bị từ 1000px trở lên thì style menu lại như bên dưới*/
+@media (min-width:1000px)
+{
+	.btn-menu{display: none}
+	ul.menu{
+		display: flex !important; /* xuất hiện lại menu đang ẩn và cho các list nằm cạnh nhau*/
+		margin-top: 0
+	}
+	
+}
+.text-center{ text-align:center}
+.text-left{ text-align:left}
+.text-right{ text-align:right}
+.text-justify{ text-align:justify}
+/*---thu vien mau--*/
+.bg-primary {	background-color:#ED5D11}
+.text-primary{	color:#ED5D11 }
+.bg-dark-10{ background-color: rgba(0,0,0,0.1)}
+.bg-dark-20{ background-color: rgba(0,0,0,0.2)}
+.bg-dark-30{ background-color: rgba(0,0,0,0.3)}
+.bg-dark-40{ background-color: rgba(0,0,0,0.4)}
+.text-light{ color: white}
+
+footer{ padding-top: 50px}
+.form-input
+{
+	width: 100%;
+	border: 1px solid #ddd;
+	padding: 10px;
+	border-radius: 8px;
+	margin-bottom: 10px
+}
+.btn-primary
+{
+	background-color: tomato;
+	color: white;
+	padding: 5px 10px;
+	border:none;
+	cursor: pointer
+}
+.btn-primary:hover{
+	background: #139687
+}
+.btn-secondary
+{
+	background-color: #139687;
+	color: white;
+	padding: 5px 10px;
+	border:none;
+	cursor: pointer
+}
+.btn-secondary:hover{
+	background: tomato;
+}
+
+
+
+
+
+
+
+
